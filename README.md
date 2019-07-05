@@ -2,6 +2,6 @@
 extra teleport jaunt
 
 
-/8 jaunt on/off
+>/8 jaunt on/off
 
-Activate Using Personalized Greeting
+>Activate Using Personalized Greeting
