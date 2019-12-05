@@ -33,7 +33,7 @@ module.exports = function Jaunt(mod) {
 		});
 	}
 
-	mod.hook('S_LOGIN', 13, ({ templateId }) => {
+	mod.hook('S_LOGIN', 14, ({ templateId }) => {
 		_m.m = [1, 10].includes(_m.i = (templateId - 10101) % 100) ? 1 : [6, 7].includes(_m.i) ? 0 : -1;	
 		_m.g = [{ gameId: mod.game.me.gameId }];
 
@@ -167,7 +167,7 @@ module.exports = function Jaunt(mod) {
 			}
 		}
 
-		hook('S_SPAWN_NPC', 10, { order: 300, filter: { fake: null } }, ({ gameId, loc, w, templateId, visible, villager, bySpawnEvent, bgTeam }) => {
+		hook('S_SPAWN_NPC', 11, { order: 300, filter: { fake: null } }, ({ gameId, loc, w, templateId, visible, villager, bySpawnEvent, bgTeam }) => {
 			if (!visible || villager || bySpawnEvent || bgTeam || [1044, 1045, 1151, 1270, 1709, 1710, 1711, 1712, 5003, 5004, 9996, 9997, 9998, 2041, 2042, 2043, 2100, 4101].includes(templateId)) return;
 
 			_m.b.push({ gameId, loc, w });
@@ -234,7 +234,7 @@ module.exports = function Jaunt(mod) {
 			}
 		});
 
-		hook('C_START_INSTANCE_SKILL', 5, { order: -100 }, ({ skill, loc, w, targets }) => {
+		hook('C_START_INSTANCE_SKILL', 7, { order: -100 }, ({ skill, loc, w, targets }) => {
 			if (skill.id !== 60401301 || (!mod.game.me.inCombat && targets[0])) return;
 
 			Object.assign(skill, { type: 0, npc: false, huntingZoneId: 0, reserved: 0 });
@@ -305,7 +305,7 @@ module.exports = function Jaunt(mod) {
 					mod.command.message('\n\t' + f1(v1).clr(_m.w === w ? 'FF1493' : 'FFD700') + '\n\t' + f1(v3).clr(_m.w === w ? 'FF1493' : 'FFD700') + (v2 >= 3.14159 ? ' (' + '360° - ' + f1(v2) + ')' : '') + '\n\t' + `${_m.x[0]}m`.clr(_m.w === w ? 'FF1493' : 'FFD700'));
 				}
 
-				mod.send('S_SPAWN_DROPITEM', 6, { gameId: --_m.u1, loc: { x: _m.z.x, y: _m.z.y, z: _m.z.z - 500 }, item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
+				mod.send('S_SPAWN_DROPITEM', 8, { gameId: --_m.u1, loc: { x: _m.z.x, y: _m.z.y, z: _m.z.z - 500 }, item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
 				setTimeout(
 					(function(p1) {
 						return () => mod.send('S_DESPAWN_DROPITEM', 4, { gameId: p1 });
