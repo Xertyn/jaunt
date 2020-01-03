@@ -5,7 +5,7 @@ String.prototype.clr = function(p1) {
 const path = require('path'),
 	fs = require('fs');
 
-module.exports = function Jaunt(mod) {
+module.exports = function ff(mod) {
 	const _m = {
 		h: [],
 		b: [],
@@ -22,11 +22,11 @@ module.exports = function Jaunt(mod) {
 		_m.c = {
 			enable: true,
 			debug: false,
-			range: 35,
+			range: 50,
 			angle: 0.261799,
-			distance: 300,
+			distance: 400,
 			direction: 1,
-			cooldown: 3500,
+			cooldown: 1500,
 		};
 		fs.writeFile(path.join(__dirname, 'config.json'), JSON.stringify(_m.c, undefined, '\t'), () => {
 			mod.log(`Generated a new config.json.`);
@@ -305,7 +305,7 @@ module.exports = function Jaunt(mod) {
 					mod.command.message('\n\t' + f1(v1).clr(_m.w === w ? 'FF1493' : 'FFD700') + '\n\t' + f1(v3).clr(_m.w === w ? 'FF1493' : 'FFD700') + (v2 >= 3.14159 ? ' (' + '360° - ' + f1(v2) + ')' : '') + '\n\t' + `${_m.x[0]}m`.clr(_m.w === w ? 'FF1493' : 'FFD700'));
 				}
 
-				mod.send('S_SPAWN_DROPITEM', 8, { gameId: --_m.u1, loc: { x: _m.z.x, y: _m.z.y, z: _m.z.z - 500 }, item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
+				mod.send('S_SPAWN_DROPITEM', 6, { gameId: --_m.u1, loc: { x: _m.z.x, y: _m.z.y, z: _m.z.z - 500 }, item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
 				setTimeout(
 					(function(p1) {
 						return () => mod.send('S_DESPAWN_DROPITEM', 4, { gameId: p1 });
