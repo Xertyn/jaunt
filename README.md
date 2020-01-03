@@ -1,5 +1,5 @@
 # jaunt
-extra teleport jaunt
+teleport jaunt
 
 ```
 /8 jaunt on/off
