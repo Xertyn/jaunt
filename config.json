@@ -1,9 +1,9 @@
 {
 	"enable": true,
 	"debug": false,
-	"range": 35,
+	"range": 50,
 	"angle": 0.261799,
-	"distance": 300,
+	"distance": 400,
 	"direction": 1,
-	"cooldown": 3500
+	"cooldown": 1500
 }
