@@ -1,0 +1,16 @@
+{
+    "disableAutoUpdate": false,
+    "disabled": false,
+    "name": "Jaunt",
+    "author": "Author unknown, forked by Xertyn",
+    "description": "Emulated Teleport jaunt, usable on every class.",
+    "version": "05.01.2020",
+    "servers": ["https://raw.githubusercontent.com/Xertyn/jaunt/master/"],
+    "options": {
+        "niceName": "Jaunt",
+        "guiName": "Jaunt",
+        "reloadable": false
+    },
+    "dependencies": {},
+    "conflicts": []
+}

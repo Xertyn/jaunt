@@ -194,7 +194,7 @@ module.exports = function ff(mod) {
 				if (_m.c.debug) {
 					if ((_m.a1 = _m.a1 || dest) !== dest && (_m.d = Math.floor(((dest.x - _m.p.loc.x) ** 2 + (dest.y - _m.p.loc.y) ** 2) ** 0.5 / 25)) < 35) {
 						mod.send('S_DESPAWN_DROPITEM', 4, { gameId: _m.u2 });
-						mod.send('S_SPAWN_DROPITEM', 6, { gameId: --_m.u2, loc: Object.assign({}, dest, { z: dest.z - 500 }), item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
+						mod.send('S_SPAWN_DROPITEM', 8, { gameId: --_m.u2, loc: Object.assign({}, dest, { z: dest.z - 500 }), item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
 					}
 				}
 			}
@@ -207,7 +207,7 @@ module.exports = function ff(mod) {
 				if (_m.c.debug) {
 					if ((_m.a2 = _m.a2 || loc) !== loc && (_m.d = Math.floor(((loc.x - _m.p.loc.x) ** 2 + (loc.y - _m.p.loc.y) ** 2) ** 0.5 / 25)) < 35) {
 						mod.send('S_DESPAWN_DROPITEM', 4, { gameId: _m.u2 });
-						mod.send('S_SPAWN_DROPITEM', 6, { gameId: --_m.u2, loc: Object.assign({}, loc, { z: loc.z - 500 }), item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
+						mod.send('S_SPAWN_DROPITEM', 8, { gameId: --_m.u2, loc: Object.assign({}, loc, { z: loc.z - 500 }), item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
 					}
 				}
 			}
@@ -220,7 +220,7 @@ module.exports = function ff(mod) {
 				if (_m.c.debug) {
 					if ((_m.a3 = _m.a3 || loc) !== loc && (_m.d = Math.floor(((loc.x - _m.p.loc.x) ** 2 + (loc.y - _m.p.loc.y) ** 2) ** 0.5 / 25)) < 35) {
 						mod.send('S_DESPAWN_DROPITEM', 4, { gameId: _m.u2 });
-						mod.send('S_SPAWN_DROPITEM', 6, { gameId: --_m.u2, loc: Object.assign({}, loc, { z: loc.z - 500 }), item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
+						mod.send('S_SPAWN_DROPITEM', 8, { gameId: --_m.u2, loc: Object.assign({}, loc, { z: loc.z - 500 }), item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
 					}
 				}
 			}
@@ -248,7 +248,7 @@ module.exports = function ff(mod) {
 						return () => {
 							if (_m.c.debug) {
 								mod.send('S_DESPAWN_DROPITEM', 4, { gameId: _m.u1 });
-								mod.send('S_SPAWN_DROPITEM', 6, { gameId: --_m.u1, loc: Object.assign(p1[0], { z: p1[0].z - 500 }), item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
+								mod.send('S_SPAWN_DROPITEM', 8, { gameId: --_m.u1, loc: Object.assign(p1[0], { z: p1[0].z - 500 }), item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
 								setTimeout(
 									(function(p1) {
 										return () => mod.send('S_DESPAWN_DROPITEM', 4, { gameId: p1 });
@@ -305,7 +305,7 @@ module.exports = function ff(mod) {
 					mod.command.message('\n\t' + f1(v1).clr(_m.w === w ? 'FF1493' : 'FFD700') + '\n\t' + f1(v3).clr(_m.w === w ? 'FF1493' : 'FFD700') + (v2 >= 3.14159 ? ' (' + '360° - ' + f1(v2) + ')' : '') + '\n\t' + `${_m.x[0]}m`.clr(_m.w === w ? 'FF1493' : 'FFD700'));
 				}
 
-				mod.send('S_SPAWN_DROPITEM', 6, { gameId: --_m.u1, loc: { x: _m.z.x, y: _m.z.y, z: _m.z.z - 500 }, item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
+				mod.send('S_SPAWN_DROPITEM', 8, { gameId: --_m.u1, loc: { x: _m.z.x, y: _m.z.y, z: _m.z.z - 500 }, item: 98260, amount: 1, expiry: 0, explode: false, masterwork: false, enchant: 0, source: 0, debug: false, owners: [{ id: 0 }] });
 				setTimeout(
 					(function(p1) {
 						return () => mod.send('S_DESPAWN_DROPITEM', 4, { gameId: p1 });
@@ -325,8 +325,8 @@ module.exports = function ff(mod) {
 			}
 			_m.x = [loc, Date.now()];
 
-			mod.send('S_ABNORMALITY_BEGIN', 3, { target: mod.game.me.gameId, source: mod.game.me.gameId, id: 2112, duration: 0, unk: 0, stacks: 1, unk2: 0, unk3: 0 });
-			mod.send('S_ABNORMALITY_BEGIN', 3, { target: mod.game.me.gameId, source: mod.game.me.gameId, id: 2060, duration: 0, unk: 0, stacks: 1, unk2: 0, unk3: 0 });
+			mod.send('S_ABNORMALITY_BEGIN', 4, { target: mod.game.me.gameId, source: mod.game.me.gameId, id: 2112, duration: 0, stacks: 1, unk3: 0 });
+			mod.send('S_ABNORMALITY_BEGIN', 4, { target: mod.game.me.gameId, source: mod.game.me.gameId, id: 2060, duration: 0, stacks: 1, unk3: 0 });
 			setTimeout(() => {
 				mod.send('S_ABNORMALITY_END', 1, { target: mod.game.me.gameId, id: 2112 });
 				mod.send('S_ABNORMALITY_END', 1, { target: mod.game.me.gameId, id: 2060 });
